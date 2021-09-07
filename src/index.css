@@ -1,0 +1,325 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+
+/* ===================================
+General Styling
+====================================== */
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 110%;
+}
+
+a {
+  color: rgba(0,0,0,.8);
+  border-bottom: 3px solid #5761e6;
+  border-bottom: 3px solid #21E0D6;
+  border-bottom: 3px solid #a8a622;
+}
+
+a:hover {
+  color: rgba(0,0,0,.7);
+  border-bottom: 3px solid #ffe866; /* light yellow */
+  text-decoration-line: none;
+}
+
+.chart-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+/* ===================================
+Chart Headers
+====================================== */
+h2 {
+ font-family: 'Fira Sans', sans-serif;
+ display: inline;
+ margin-bottom: 0; /* keep. removes default h2 margin */
+ border-bottom: .7rem solid #5f50eb;
+ font-weight: 400;
+ font-size: 130%;
+ line-height: 40px; /* keep. in case header is two lines */
+}
+
+/* not using but keep in case you change mind */
+ h3.weight-description {
+  font-size: 100%;
+  font-weight: 100;
+  margin: .5rem 0 0 0;
+  text-align: center;
+}
+
+
+/* ===================================
+Chart
+====================================== */
+svg {
+  /* To make responsive, in concert with viewBox="0 0 900 2400" */
+  /* see svg with viewBox in BarChart.js */
+  height: 100%;
+  width: 100%;
+}
+
+/* ===================================
+Chart Lables & Axies
+====================================== */
+text.label {
+  font-size: .9rem;
+}
+
+text {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.4em;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #D4D8DA;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+
+/* ===================================
+Chart Tooltip
+====================================== */
+.tool-tip {
+  font-size: 80%;
+  position: absolute;
+  background-color: rgba(242, 242, 242, .95);
+  border-radius: 5px;
+  border: 3px solid #ffcd44;
+  padding: 14px;
+  text-align: left;
+  display: none; /* Keep. This hides the tooltip at initial load */
+}
+
+h4 {
+  font-size: 120%;
+}
+
+ul {
+  list-style-position: inside;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  line-height: 1px;
+  padding-left: 0;
+}
+
+
+/* =================================
+Sidebar General
+==================================== */
+.sidebar {
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding: 1rem 1rem 0 1rem;
+  background-color: rgba(242, 242, 242, .5); /* light gray*/
+}
+
+h1.title {
+  font-family: 'Satisfy', cursive;
+  font-size: 200%;
+  margin: 0 0 1rem 0;
+}
+
+.sidebar-text, .sidebar-link{
+  font-size: 70%;
+  line-height: 1.4;
+}
+
+form {
+  margin-top: 1rem;
+}
+
+/* ============================
+Sidebar - Dropdown Years
+=============================== */
+.dropdown-button {
+  background-color: #ffcd44;
+  border: 5px solid #ffcd44;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 80%;
+  margin-bottom: 1rem;
+}
+
+.dropdown-button:hover {
+  background-color: #f1f1ea;
+  border: 5px solid #ffe347;
+}
+
+.radio-toolbar input[type="radio"] {
+  display:none;
+}
+
+.radio-toolbar label {
+  background-color: #f7f8f2;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 80%;
+  padding: .3rem;
+  margin: .2rem;
+}
+
+.radio-toolbar label:hover {
+  background-color: #286eaf;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+  background-color: #217eb4;
+  font-weight: 600;
+}
+
+#radio-toolbar-type label {
+  width: 12rem;
+}
+
+#radio-toolbar-sort label {
+  width: 8rem;
+}
+
+
+/*==============================
+ Footer
+================================*/
+footer {
+  color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  text-align: right;
+  bottom: 0;
+  right: 2rem;
+  padding-top: .5rem;
+  font-size: 70%;
+}
+
+.footerLink {
+  margin-left: 5px;
+}
+
+span.footerLink a:hover{
+  color: #696d9c;
+}
+
+/* github logo */
+i.fab {
+  padding-left: .5rem;
+  font-size: 125%;
+}
+
+@media screen and (max-width: 600px) {
+
+
+  .dropdown-button,
+  #radio-toolbar-type label,
+  #radio-toolbar-sort label {
+    width: 90%;
+  }
+
+  .radio-toolbar label {
+    font-size: 100%;
+  }
+
+  .sidebar {
+    background-color: white;
+  }
+
+  h1.title {
+    font-size: 210%;
+    margin: .5rem;
+    text-align: center;
+  }
+
+  .sidebar-text{
+    font-size: 106%;
+    line-height: 1.5;
+  }
+
+  .sidebar-link {
+    text-align: center;
+  }
+
+  .dropdown-button {
+    border: 8px solid #ffcd44; /* yellow */
+    border-left: 20px solid #ffcd44; /* yellow */
+    border-right: 20px solid #ffcd44; /* yellow */
+    font-size: 100%;
+    /*padding-top: 2rem;*/
+    /*padding-bottom: 2rem;*/
+    margin: auto;
+    text-align: center;
+  }
+
+  form {
+    margin: auto;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  div#radio-toolbar-type.radio-toolbar label {
+    text-align: center;
+    padding: .3rem;
+    font-size: 100%;
+    margin: .25rem auto;
+  }
+
+  h2 {
+    margin-bottom: 12px;
+    border-bottom: .4rem solid #ffcd44;
+    font-size: 120%;
+    line-height: 36px;
+  }
+
+  svg {
+    height: 100%;
+    width: 90%;
+  }
+
+  text.label {
+    font-size: 1.4rem;
+  }
+
+  text {
+    font-size: 1.4rem;
+  }
+
+  footer {
+    font-size: 1rem;
+    bottom: -2rem;
+    text-align: center;
+  }
+
+  .fa-github {
+    font-size: 1.2rem;
+  }
+
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 930px) {
+
+  #radio-toolbar-type label {
+    font-size: 65%;
+    width: 10rem;
+  }
+
+  #radio-toolbar-sort label {
+    font-size: 65%;
+    width: 7rem;
+  }
+
+}
+
+@media screen and (min-width: 1500px) {
+  svg {
+    width: 75%;
+  }
+
+}
