@@ -1,2 +1,2 @@
-# AI-Project
-AI project
+# Data Vistualization
+IgniteCS  
